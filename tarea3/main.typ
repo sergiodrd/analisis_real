@@ -225,6 +225,17 @@
   directa, esto es, encuentre una cubierta abierta de $(0, 1)$ que no posee una
   subcubierta finita._
   == Prueba:
+  Considere la familia $A_n := (1 / n, 1 - 1 / n), n in NN without {1}$. Note
+  que $A_i$ es abierto $forall i in NN without {1}$.
+
+  Tome $x in (0, 1)$ y note que $0 lt x lt 1$. Entonces $exists k in NN without
+  {1}$ tal que $0 lt 1 / k lt x lt 1 - 1 / k lt 1$, por lo tanto, $x in A_k ==>
+  x in union.big_(n in NN without {1}) A_n$. Entonces: $ (0, 1) subset.eq
+  union.big_(n in NN without {1}) A_n ==> union.big_(n in NN without {1})
+  "es una cubierta abierta para" (0, 1). $
+
+  Sea ${A_1, A_2, ..., A_k}$ una subcolección finita arbitraria de
+  $union.big_(n in NN without {1}) A_n$ 
 
   *MEP*
 ]
@@ -255,6 +266,12 @@
   conjunto: $S := { x in QQ | a lt x lt b}$. Demuestre que $S subset.eq QQ$ es
   cerrado y acotado (en $QQ$), pero no compacto (en $QQ$)._
   == Prueba:
+  Por contradicción, suponga que $S' subset.eq.not S$, entonces $S' eq.not
+  nothing ==> exists x in S' without S$. Sin pérdida de generalidad, suponga que
+  $x gt.eq b$. Note que $x in QQ$ y $b in.not QQ$ $==> x eq.not b ==> x gt b$.
+  Pero $x in S' ==> U_(r)(x) without {x} sect S eq.not nothing " " forall r in
+  (0, infinity)$. Ahora, tome $rho eq (x - b) / 2 in (0, infinity)$ y construya
+  $U_(rho)(x)$. Note que: 
 
   *MEP*
 ]
