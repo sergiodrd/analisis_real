@@ -240,12 +240,16 @@
 
   Tome $x in (0, 1)$ y note que $0 lt x lt 1$. Entonces $exists k in NN without
   {1}$ tal que $0 lt 1 / k lt x lt 1 - 1 / k lt 1$, por lo tanto, $x in A_k ==>
-  x in union.big_(n in NN without {1}) A_n$. Entonces: $ (0, 1) subset.eq
-  union.big_(n in NN without {1}) A_n ==> union.big_(n in NN without {1})
+  x in union.big_(n eq 2)^infinity A_n$. Entonces: $ (0, 1) subset.eq
+  union.big_(n eq 2)^infinity A_n ==> union.big_(n eq 2)^infinity
   "es una cubierta abierta para" (0, 1). $
 
   Sea ${A_1, A_2, ..., A_k}$ una subcolección finita arbitraria de
-  $union.big_(n in NN without {1}) A_n$ 
+  $F := union.big_(n eq 2)^infinity A_n$. Ahora escoja \ $1 / m_0 eq min { 1 / m
+  | (1 / m, 1 - 1 / m) in F }$, y note que $0 lt 1 / m_0$. Entonces, $exists
+  alpha in (0, 1)$ tal que $0 lt alpha lt 1 / m_0$. Entonces $alpha in.not F$.
+
+  $therefore (0, 1) subset.eq.not F ==> (0, 1)$ no es compacto.
 
   *MEP*
 ]
