@@ -25,20 +25,19 @@
   E^compose$. Por lo tanto, $E^compose eq E'$, lo que implica que $E' without
   E^compose eq nothing$.
 
-  Suponga, por contradicción, que $E eq.not and E eq.not RR$. Ahora fije un
-  elemento arbitrario $x in E$ y considere $F := { d(x, y) | y in E^complement }
-  subset.eq RR$. Note que $E eq.not RR ==> E^complement eq.not nothing ==> F
-  eq.not nothing$. Además, por la definición de la métrica, $0$ es una cota
-  inferior para $F$. Por lo tanto, por la propiedad de la cota inferior mínima,
-  $inf(F)$ existe en $RR$. Entonces existe un $alpha in RR$ tal que $d(x, alpha)
-  = inf(F)$ con $(U_(rho)(alpha) without {alpha}) sect E eq.not nothing " "
-  forall rho gt 0$ (porque $inf(F) - rho in.not F " " forall rho gt 0 ==> "si"
-  d(x, y) = inf(F) - rho, "entonces" y in.not E^complement ==> y in E$ (this
-  justification is wrong kind of)). Además, $U_(rho)(alpha) subset.eq.not E$
-  (porque $exists epsilon in F$ tal que $inf(F) lt epsilon lt inf(F) + rho " "
-  forall rho gt 0 ==> exists y in E^complement "tal que" d(x, y) = epsilon$).
-  Por lo tanto, $x in E^compose without E' ==> E^compose without E' eq.not
-  nothing$. $contradiction$
+  Suponga, por contradicción, que $E eq.not nothing and E eq.not RR$. Ahora fije
+  un elemento arbitrario $x in E$ y considere $F := { d(x, y) | y in
+  E^complement } subset.eq RR$. Note que $E eq.not RR ==> E^complement eq.not 
+  nothing ==> F eq.not nothing$. Además, por la definición de la métrica, $0$ es
+  una cota inferior para $F$. Por lo tanto, por la propiedad de la cota inferior
+  mínima, $inf(F)$ existe en $RR$. Entonces existe un $alpha in RR$ tal que
+  $d(x, alpha) = inf(F)$ con $(U_(rho)(alpha) without {alpha}) sect E eq.not
+  nothing " " forall rho gt 0$ (porque $inf(F) - rho in.not F " " forall rho gt
+  0 ==> "si" d(x, y) = inf(F) - rho, "entonces" y in.not E^complement ==> y in
+  E$). Además, $U_(rho)(alpha) subset.eq.not E$ (porque $exists epsilon in F$
+  tal que $inf(F) lt epsilon lt inf(F) + rho " " forall rho gt 0 ==> exists y in
+  E^complement "tal que" d(x, y) = epsilon$). Por lo tanto, $x in E^compose
+  without E' ==> E^compose without E' eq.not nothing$. $contradiction$
 
   Por lo tanto, $E eq nothing or E eq RR$. Ahora, note que $x in nothing ==>
   exists r gt 0 "tal que" B(x; r) subset.eq E$ es cierto porque la hipótesis es
@@ -89,10 +88,21 @@
 
   == Prueba:
   Note que como $d$ es una métrica:
-  + $d^*(x, x) eq d(x, x) / 1 + d(x, x) eq 0, " " forall x in X$
-  + $d^*(x, y) eq d(x, y) / 1 + d(x, y) eq d(y, x) / 1 + d(y, x) eq d^*(y, x),
-  " " forall x, y in X$
-  + todo
+  $ d^*(x, x) eq d(x, x) / (1 + d(x, x)) eq 0, " " forall x in X $
+
+  $ d^*(x, y) eq d(x, y) / (1 + d(x, y)) eq d(y, x) / (1 + d(y, x)) eq
+  d^*(y, x), " " forall x, y in X $
+
+  $ d^*(x, z) &eq d(x, z) / (1 + d(x, z)) lt.eq (d(x, y) + d(y, z)) / (1 +
+  d(x, y) + d(y, z)) \ &lt.eq (d(x, y) + 2 d(x, y) d(y, z) + d(x, z)) / (1 +
+  d(x, y) + d(x, y) d(y, z) + d(y, z))\ &eq d(x, y) / (1 + d(x, y)) + d(y, z) /
+  (1 + d(y, z)) eq d^*(x, y) + d^*(y, z) $
+
+  Es claro que el dominio de $d^*$ es $X times X$. Como $d^*$ es una métrica, su
+  rango empieza limitado a $[0, infinity)$, pero ahora, note que $lim_(d(x, y)
+  -> infinity) d^*(x, y) eq 1$.
+
+  $therefore d^*: X times X -> [0, 1)$.
 
   *MEP*
 ]
