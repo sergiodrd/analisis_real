@@ -211,6 +211,14 @@
 
   _(h) Pruebe que $E'$ es cerrado._
   == Prueba:
+  Tome $x in (E')^complement$ y note que $exists r gt 0$ tal que $B(x; r)
+  without {x} sect E eq nothing$. Entonces $y in B(x; r) ==> exists rho in RR$
+  con $0 lt rho lt r$ tal que $B(y; rho) subset.eq B(x; r) ==> B(y, rho) without
+  {y} sect E subset.eq B(x; r) without {x} sect E eq nothing$. Entonces $B(y;
+  rho) without {y} sect E eq nothing ==> y in (E')^complement$. Por lo tanto,
+  $B(x; r) subset.eq (E')^complement ==> (E')^complement$ abierto.
+
+  $therefore E'$ cerrado.
 
   *MEP*
 
