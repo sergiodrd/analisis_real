@@ -253,7 +253,7 @@
   F_j $ Note que, por construcción, $F$ es una cubierta abierta finita que cubre
   a $K$. Además, $F_i subset.eq U$ \ $forall i in {1, 2, ..., n}$, lo que
   implica que $F subset.eq U$. Como $U$ era arbitrario, siempre podemos
-  construir una subcuberta abierta finita de $U$ que cubre a $K$.
+  construir una subcubierta abierta finita de $U$ que cubre a $K$.
 
   $therefore K$ es compacto.
 
@@ -271,7 +271,30 @@
   $x gt.eq b$. Note que $x in QQ$ y $b in.not QQ$ $==> x eq.not b ==> x gt b$.
   Pero $x in S' ==> U_(r)(x) without {x} sect S eq.not nothing " " forall r in
   (0, infinity)$. Ahora, tome $rho eq (x - b) / 2 in (0, infinity)$ y construya
-  $U_(rho)(x)$. Note que: 
+  $U_(rho)(x)$. Note que: $ y in U_(rho)(x) ==> y gt x - rho eq x - abs(x - b) /
+  2 eq (2 x - x + b) / 2 eq (x + b) / 2 $ Como $x gt b, exists alpha in
+  (0, infinity)$ tal que $x eq b + alpha$. Entonces: $ &y gt ((b + alpha) + b) /
+  2 eq (2 b + alpha) / 2 eq (2 b) / 2 + alpha / 2 eq b + alpha / 2 gt b \ ==>
+  &y in.not S ==> U_(rho)(x) without {x} sect S eq nothing. contradiction $
+
+  $therefore S' subset.eq S ==> S$ cerrado en $QQ$.
+
+  Tome $p, q in QQ$ tal que $p lt a$ y $q gt b$. \ $therefore S$ está acotado
+  por $p$ y $q$ en $QQ$.
+
+  Sea $S_n := B((b - a) / 2; (b - a) / n) subset.eq QQ, n in NN without {1, 2}$.
+  Tome $x in S$ y note que: $a lt x lt b$ \ $==> exists k in NN without {1, 2}$
+  tal que $a lt (b - a) / 2 - (b - a) / k lt x lt (b - a) / 2 + (b - a) / k lt
+  b ==> x in S_k ==> x in union.big_(n eq 3)^infinity S_n$ es una cubierta
+  abierta para $S$.
+
+  Tome una subcolección finita arbitraria $F := union {A_1, A_2, ..., A_k}
+  subset.eq union_(n eq 3)^infinity S_n$. Sea $alpha eq (b - a) / j in F$ tal
+  que $abs(alpha - a) eq min {abs(x - a) | x in F}$. Entonces $a lt (b - a) / j
+  ==> exists s in S$ tal que $a lt s lt (b - a) / j$. Pero \ $s in.not F$. Por
+  lo tanto $S subset.eq.not F$.
+
+  $therefore S$ no es compacto en $QQ$.
 
   *MEP*
 ]
