@@ -94,7 +94,7 @@
   d^*(y, x), " " forall x, y in X $
 
   $ d^*(x, z) &eq d(x, z) / (1 + d(x, z)) lt.eq (d(x, y) + d(y, z)) / (1 +
-  d(x, y) + d(y, z)) \ &lt.eq (d(x, y) + 2 d(x, y) d(y, z) + d(x, z)) / (1 +
+  d(x, y) + d(y, z)) \ &lt.eq (d(x, y) + 2 d(x, y) d(y, z) + d(y, z)) / (1 +
   d(x, y) + d(x, y) d(y, z) + d(y, z))\ &eq d(x, y) / (1 + d(x, y)) + d(y, z) /
   (1 + d(y, z)) eq d^*(x, y) + d^*(y, z) $
 
