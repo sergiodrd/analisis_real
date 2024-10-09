@@ -188,6 +188,33 @@
   _(e) Determine si $E^compose eq (overline(E))^compose$. Pruebe ó provea un
   contraejemplo._
   == Prueba:
+  Tome $x in E^compose$, entonces $exists r gt 0$ tal que $B(x; r) subset.eq E
+  ==> B(x; r) subset.eq E union E' eq overline(E) ==> x in
+  (overline(E))^compose$ \ $therefore E^compose subset.eq
+  (overline(E))^compose$.
+
+  Tome $x in (overline(E))^compose ==> exists r gt 0$ tal que $B(x; r) subset.eq
+  overline(E) eq E union E' eq E union.sq E' without E$. Note que, como esta
+  unión es disjunta, si probamos que $y in B(x; r) and y in.not E'$, entonces
+  $B(x; r) subset.eq E$. Ahora, sea \ $F := {d(x, z) | z in B(x; r) sect E}$.
+  Note que $F subset.eq RR, F eq.not nothing$, y $r$ es cota superior para $F$.
+  Entonces, por la propiedad de la cota superior mínima $exists alpha in RR$ tal
+  que $alpha eq sup(F)$. Suponga, por contradicción, que $B(x; r) sect
+  E^complement eq.not nothing$, entonces $exists y_0 in B(x; r) sect
+  E^complement$. Note que $alpha lt.eq d(x, y_0) lt r$, entonces, por la
+  densidad de los reales, y la abiertitud de las bolas, $exists y in B(x; r)
+  sect E^complement$ tal que \ $alpha lt.eq d(x, y_0) lt d(x, y) lt r ==> alpha
+  lt d(x, y) lt r$. Nuevamente, usando la densidad y la abiertitud, $exists
+  epsilon gt 0$ tal que $alpha lt d(x, y) - epsilon lt d(x, y) lt d(x, y) +
+  epsilon lt r$. Entonces $B(y; epsilon) subset.eq B(x; r)$ y $B(y; epsilon)
+  without {y} sect E eq nothing$. Esto contradice que $B(x; r) subset.eq E
+  union.sq E' without E$. $contradiction$
+
+  Entonces $B(x; r) sect E^complement eq nothing$, lo que implica que $B(x; r)
+  sect E' without E eq nothing ==> B(x; r) subset.eq E ==> x in E^compose$. \
+  $therefore (overline(E))^compose subset.eq E^compose$
+
+  $therefore (overline(E))^compose eq E^compose$
 
   *MEP*
 
@@ -197,7 +224,7 @@
   contraejemplo._
   == Prueba:
 
-  *MEP*
+   *MEP*
 
   ===
 
