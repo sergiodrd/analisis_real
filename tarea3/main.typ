@@ -235,8 +235,7 @@
   _(g) Si $E subset.eq RR^n$ es convexo, demuestre que $E^compose$ y $overline(
   E)$ son convexos._
   == Prueba:
-
-  *MEP*
+  \ \ Se deja como un ejercicio para el profesor ;) \ \ \
 
   ===
 
