@@ -257,6 +257,20 @@
 
   _(i) Demuestre que $overline(E)' eq E'$._
   == Prueba:
+  Tome $x in overline(E)'$ y note que $ &U_(r)(x) without {x} sect (E union E')
+  eq.not nothing \ ==> &(U_(r)(x) without {x} sect E) union (U_(r)(x) without
+  {x} sect E') eq.not nothing \ ==> &U_(r)(x) without {x} sect E eq.not nothing
+  \ ==> &x in E' $
+
+  $therefore overline(E)' subset.eq E'$
+
+  Tome $x in E'$ y note que $ &U_(r)(x) without {x} sect E eq.not nothing \ ==>
+  &U_(r)(x) without {x} sect (E union E') eq.not nothing \ ==> &U_(r)(x) without
+  {x} sect overline(E) eq.not nothing \ ==> &x in overline(E)' $.
+
+  $therefore E' subset.eq overline(E)'$
+
+  $therefore overline(E)' eq E'$
 
   *MEP*
 
