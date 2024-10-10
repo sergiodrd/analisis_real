@@ -223,8 +223,12 @@
   _(f) Determine si $overline(E) eq overline(E^compose)$. Pruebe ó provea un
   contraejemplo._
   == Prueba:
+  Tome $E eq (0, 1) union 7$, entonces $E' eq [0, 1] ==> overline(E) eq [0, 1]
+  union 7$. Note que $E^compose eq (0, 1) ==> overline(E^compose) eq [0, 1]$.
+  Por lo tanto, $overline(E) subset.eq.not overline(E^compose) ==> overline(E)
+  eq.not overline(E^compose)$.
 
-   *MEP*
+  *MEP*
 
   ===
 
