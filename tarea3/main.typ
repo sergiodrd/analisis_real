@@ -223,8 +223,8 @@
   _(f) Determine si $overline(E) eq overline(E^compose)$. Pruebe ó provea un
   contraejemplo._
   == Prueba:
-  Tome $E eq (0, 1) union 7$, entonces $E' eq [0, 1] ==> overline(E) eq [0, 1]
-  union 7$. Note que $E^compose eq (0, 1) ==> overline(E^compose) eq [0, 1]$.
+  Tome $E eq (0, 1) union {7}$, entonces $E' eq [0, 1] ==> overline(E) eq [0, 1]
+  union {7}$. Note que $E^compose eq (0, 1) ==> overline(E^compose) eq [0, 1]$.
   Por lo tanto, $overline(E) subset.eq.not overline(E^compose) ==> overline(E)
   eq.not overline(E^compose)$.
 
@@ -257,14 +257,14 @@
 
   _(i) Demuestre que $overline(E)' eq E'$._
   == Prueba:
-  Tome $x in overline(E)'$ y note que $ &U_(r)(x) without {x} sect (E union E')
+  Tome $x in overline(E)'$ y note que: $ &U_(r)(x) without {x} sect (E union E')
   eq.not nothing \ ==> &(U_(r)(x) without {x} sect E) union (U_(r)(x) without
   {x} sect E') eq.not nothing \ ==> &U_(r)(x) without {x} sect E eq.not nothing
   \ ==> &x in E' $
 
   $therefore overline(E)' subset.eq E'$
 
-  Tome $x in E'$ y note que $ &U_(r)(x) without {x} sect E eq.not nothing \ ==>
+  Tome $x in E'$ y note que: $ &U_(r)(x) without {x} sect E eq.not nothing \ ==>
   &U_(r)(x) without {x} sect (E union E') eq.not nothing \ ==> &U_(r)(x) without
   {x} sect overline(E) eq.not nothing \ ==> &x in overline(E)' $.
 
@@ -278,6 +278,23 @@
 
   _(j) Determine si $(E')' eq E'$. Pruebe ó provea un contraejemplo._
   == Prueba:
+  Tome $x in (E')'$ y note que: $ &U_(r)(x) without {x} sect E' eq.not nothing
+  " " forall r gt 0 \ ==> &exists y in U_(r)(x) without {x} "tal que"
+  U_(epsilon)(y) without {y} sect E eq.not nothing " " forall epsilon gt 0 \ ==>
+  &exists epsilon gt 0 "tal que" U_(epsilon)(y) subset.eq U_(r)(x) \ ==>
+  &U_(r)(x) without {x} sect E eq.not nothing ==> x in E' $
+
+  $therefore (E')' subset.eq E'$
+
+  Tome $x in E'$ y note que: $ &U_(r)(x) without {x} sect E eq.not nothing " "
+  forall r gt 0 \ ==> &exists y in U_(r)(x) without {x} and exists epsilon gt 0
+  "tal que" U_(epsilon)(y) subset.eq U_(r)(x) without {x} "(porque" U_(r)(x)
+  "es abierto)" \ ==> &U_(epsilon)(y) without {y} sect E eq.not nothing ==> y in
+  E' \ ==> &U_(r)(x) without {x} sect E' eq.not nothing ==> x in (E')' $
+
+  $therefore E' subset.eq (E')'$
+
+  $therefore (E')' eq E'$
 
   *MEP*
 ]
