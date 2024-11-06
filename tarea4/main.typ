@@ -153,6 +153,26 @@
   solamente si $liminfty diam(E_n) eq 0$._
 
   == Prueba:
+  ($==>$)
+
+  Fije $epsilon gt 0$. Como ${x_n}$ es de Cauchy, $exists N in NN$ tal que $m, n
+  gt N ==> d(x_m, x_n) lt epsilon / 2$. Esto implica que $epsilon / 2$ es una
+  cota superior para $D_n := { d(x, y) | x, y in E_n } subset.eq RR$.
+  Claramente, $D_n eq.not nothing$, entonces $exists sup(D_n) in RR$. Note que,
+  por definicion, $sup(D_n) lt.eq epsilon / 2 ==> sup(D_n) lt epsilon$. Pero:
+  $ &sup(D_n) eq diam(E_n) \ ==> &diam(E_n) lt epsilon \ ==> &abs(diam(E_n) - 0)
+  lt epsilon $
+
+  $therefore liminfty diam(E_n) eq 0$.
+
+  ($<==$)
+
+  Fije $epsilon gt 0$. Como $liminfty diam(E_n) eq 0$, tenemos que $exists N' in
+  NN$ tal que: $ N gt N' &==> abs(diam(E_N) - 0) lt epsilon \ &==> diam(E_N) lt
+  epsilon $ Pero $diam(E_N) eq sup{ d(x, y) | x, y in E_N } ==> d(x_m, x_n) lt
+  epsilon space forall m, n gt N$.
+
+  $therefore {x_n}$ es de Cauchy.
 
   *MEP*
 ]
