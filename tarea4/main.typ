@@ -69,6 +69,28 @@
   _(4 puntos) -- Si $E subset.eq RR^n$ es convexo, pruebe que $E$ es conexo._
 
   == Prueba:
+  Por contrareciproco, suponga que $E$ no es conexo, entonces $exists A, B
+  subset.eq E$ con $A, B eq.not nothing$, $A, B eq.not E$, y $A union B eq E$
+  tal que $overline(A) sect B eq nothing$. Fije $a in A subset.eq E$, y $b in B
+  subset.eq E$. Ahora, sean: $ &L_A := { lambda in [0, 1] | lambda a +
+  (1 - lambda) b in A }, "y" \ &L_B := { lambda in [0, 1] | lambda a +
+  (1 - lambda) b in B }. $ Note que ambos $L_A$ y $L_B$ son subconjuntos de
+  $RR$, $1 in L_A ==> L_A eq.not nothing$, $0 in L_B ==> L_B eq.not nothing$, y
+  ambos $L_A$ y $L_B$ estan claramente acotados por $0$ y $1$. Entonces, por la
+  propiedad de la cota superior minima y la propiedad de la cota inferior maxima
+  de los numeros reales, tenemos que $exists alpha, beta in RR$ tal que $alpha
+  eq sup(L_A)$ y $beta eq inf(L_B)$.
+
+  Es claro que $alpha gt.eq 0$ y $beta lt.eq 1$. Pero ahora note que $alpha lt
+  beta$, porque si $alpha gt.eq beta$, entonces $exists lambda$ tal que $lambda
+  a + (1 - lambda) b in A sect B$, lo que contradice que E no es conexo.
+  Entonces, podemos usar la densidad en los reales para conseguir $lambda in
+  [0, 1]$ tal que $alpha lt lambda lt beta$. Pero esto implica que $lambda a +
+  (1 - lambda) b in.not A$, por definicion de $alpha$, y $lambda a + (1 -
+  lambda) b in.not B$, por definicion de $beta$. Entonces, encontramos un
+  $lambda in [0, 1]$ tal que $lambda a + (1 - lambda) b in.not E$.
+
+  $therefore E$ no es convexo.
 
   *MEP*
 ]
