@@ -113,6 +113,14 @@
   d(x, y)$._
 
   == Prueba:
+  Fije $epsilon gt 0$. Entonces $exists N_x, N_y in NN$ tal que $n gt N_x ==>
+  d(x_n, x) lt epsilon / 2$ y $n gt N_y ==> d(y_n, y) lt epsilon / 2$. Entonces,
+  $forall n gt N := max{N_x, N_y}$, tenemos que: $ d(x_n, y_n) &lt.eq d(x_n, x)
+  + d(x, y_n) \ &lt.eq d(x_n, x) + d(x, y) + d(y, y_n) \ &lt epsilon / 2 +
+  d(x, y) + epsilon / 2 = d(x, y) + epsilon \ ==> d(x_n, y_n) &- d(x, y) lt
+  epsilon \ ==> abs(d(x_n, y_n) &- d(x, y)) lt epsilon $
+
+  $therefore liminfty d(x_n, y_n) eq d(x, y)$
 
   *MEP*
 ]
