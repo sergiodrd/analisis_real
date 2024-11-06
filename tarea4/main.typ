@@ -25,6 +25,41 @@
   $ E eq X$._
 
   == Prueba:
+  ($==>$)
+
+  Suponga que $(X, d)$ es conexo. Note que $x in nothing ==> exists r in RR$ tal
+  que $B(x; r) in X ==> nothing$ es abierto y $nothing^complement eq X$ es
+  cerrado. Tambien $x in nothing ==> U_(r)(x) without {x} sect X eq.not nothing
+  ==> nothing$ es cerrado y $nothing^complement eq X$ es abierto. Entonces, solo
+  falta probar que estos subconjuntos son los unicos que son abiertos y
+  cerrados. Haremos esto por contrareciproco.
+
+  Suponga que $E subset.neq X$ con $E eq.not nothing$ es abierto y cerrado. Es
+  claro que $E^complement eq.not nothing$, $E union E^complement eq X$, y \ $E
+  sect E^complement eq nothing$. Como $E$ es cerrado, tenemos que $E eq
+  overline(E) ==> overline(E) sect E^complement eq nothing$. Similarmente, como
+  $E$ es abierto, $E^complement$ es cerrado, lo que implica que $E^complement eq
+  overline(E^complement) ==> E sect overline(E^complement) eq nothing$.
+
+  $therefore E$ y $E^complement$ estan separados $==> X$ no es conexo.
+
+  ($<==$)
+
+  Por contrareciproco, suponga que $X$ no es conexo, entonces $exists A, B
+  subset.eq X$ con $A, B eq.not nothing$, $A, B eq.not X$, y $A union B eq X$
+  tal que $overline(A) sect B eq nothing$ y $A sect overline(B) eq nothing$.
+  Note que $A union B eq X$ y $A$ y $B$ son disjuntos, lo que implica que los
+  conjuntos son complementos en $X$. Entonces llame $E := A$ y $E^complement :=
+  B$.
+
+  Tome $x$ punto limite de $E$ y note que $x in.not E^complement$ ($because x in
+  E^complement ==> x in overline(E) sect E^complement contradiction$) $==> x in
+  E ==> E$ es cerrado. Similarmente, tome $x$ punto limite de $E^complement$ y
+  note que $x in.not E ==> x in E^complement ==> E^complement$ es cerrado $==>
+  E$ es abierto.
+
+  $therefore exists E subset.eq X$ con $E eq.not nothing$ y $E eq.not X$ abierto
+  y cerrado.
 
   *MEP*
 ]
