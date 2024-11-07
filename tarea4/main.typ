@@ -131,6 +131,43 @@
   cerrado._
 
   == Prueba:
+  Por contrareciproco, suponga que $E$ no es cerrado. Entonces $exists x in E'
+  without E$. Ademas, E es infinito, porque todo subconjunto finito de un
+  espacio metrico es cerrado. Tambien, $E^0 eq.not nothing$, porque si lo fuera,
+  $E$ estaria compuesto exclusivamente de puntos aislados, lo que implicaria que
+  $E' eq nothing$. Pero entonces $E' eq nothing subset.eq E. contradiction$
+
+  Tome $x_1 in E^0$ y note que $E^0 subset.eq E and x in.not E ==> x_1 eq.not x
+  ==> d(x_1, x) gt 0$. Entonces, $exists x_2 in E^0$ tal que $d(x_2, x) eq 1 / 2
+  d(x_1, x) gt 0$. Haciendo esto recursivamente, podemos definir $x_n := alpha
+  in E^0$ con $d(alpha, x) eq 1 / 2 d(x_(n - 1), x)$. Note que ${x_n} subset.eq
+  E^0 subset.eq E$.
+
+  Note que $d(x_1, x) eq d(x_1, x) / 1 eq d(x_1, x) / 2^0 eq d(x_1, x) /
+  2^(1 - 1)$ y si $d(x_k, x) eq d(x_1, x) / 2^(k - 1)$, entonces $d(x_(k + 1))
+  eq 1 / 2 d(x_k, x) eq 1 / 2 d(x_1, x) / 2^(k - 1) eq d(x_1, x) / 2^((k + 1) -
+  1)$. Por lo tanto, por induccion, $d(x_n, x) eq d(x_1, x) / 2^(n - 1)$.
+
+  Fije $epsilon gt 0$. Considere $N := ceil(log_(2)(d(x_1, x) dot epsilon)) + 1
+  in NN$. En el caso donde $log_(2)(d(x_1, x) dot epsilon) in NN$, tenemos que:
+  $ d(x_N, x) eq d(x_1, x) / 2^(N - 1) eq d(x_1, x) / 2^(log_(2)(d(x_1, x)dot
+  epsilon) + 1 - 1) eq d(x_1, x) / (d(x_1, x) dot epsilon) eq 1 / epsilon lt
+  epsilon $ Y como $n gt N ==> d(x_1, x) / 2^(n - 1) lt d(x_1, x) / 2^(N - 1)$,
+  la desigualdad (3) se mantiene para $n gt N$. Por lo tanto, $liminfty x_n eq x
+  in.not E$.
+
+  Fije $epsilon gt 0$. Como $liminfty x_n eq x, exists N', N'' in NN$ tal que
+  $ n gt N' space and space m gt N'' ==> d(x_n, x) lt epsilon / 2 space and
+  space d(x_m, x) lt epsilon / 2 $
+
+  Entonces: $ m, n gt N := max{N', N''} ==> d(x_n, x_m) lt.eq d(x_n, x) +
+  d(x, x_m) lt epsilon / 2 + epsilon / 2 eq epsilon $ Por lo tanto, ${x_n}
+  subset.eq E$ es de Cauchy.
+
+  Entonces construimos una sucesion de Cauchy ${x_n}$ en $E$ que no converge en
+  $E$.
+
+  $therefore E$ no es completo.
 
   *MEP*
 ]
