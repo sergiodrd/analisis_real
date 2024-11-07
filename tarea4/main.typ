@@ -239,6 +239,16 @@
   definamos $beta_n := d(x_n, y_n)$. Pruebe que ${beta_n}$ converge en $RR$._
 
   == Prueba:
+  Fije $epsilon gt 0$. Entonces $exists N_x, N_y in NN$ tales que $m, n gt
+  N_x ==> d(x_m, x_n) lt epsilon / 2$ y \ $m, n gt N_y ==> d(y_m, y_n) lt
+  epsilon / 2$. Ahora, note que $forall m, n gt N := max{N_x, N_y}$, tenemos
+  que: $ d(x_m, y_m) &lt.eq d(x_m, x_n) + d(x_n, y_m) \ &lt.eq d(x_m, x_n) +
+  d(x_n, y_n) + d(y_n, y_m) \ &lt epsilon / 2 + d(x_n, y_n) + epsilon / 2 eq
+  epsilon + d(x_n, y_n) \ ==> d(x_m, y_m) &- d(x_n, y_n) lt epsilon ==>
+  abs(beta_m - beta_n) lt epsilon $ Entonces ${beta_n}$ es de Cauchy, pero
+  ${beta_n} subset.eq RR$ y $RR$ es completo.
+
+  $therefore {beta_n}$ converge.
 
   *MEP*
 ]
