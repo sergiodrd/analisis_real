@@ -271,6 +271,35 @@
   -limsupinfty(x_n) $_
 
   == Prueba:
+  Primero probaremos un resultado auxiliar. Suponga que $E subset.eq RR$ es
+  acotado y no-vacio, y \ $-E := { -x | x in E }$. Entonces sabemos que $-E$
+  tambien es acotado y no-vacio. Entonces $sup(-E) in RR$. Ahora, note que:
+  $ alpha := sup(-E) &==> alpha gt.eq -x tab forall x in E \ &==> -alpha lt.eq
+  x tab forall x in E \ &==> -alpha "es una cota inferior para" E. $ Ademas,
+  como $alpha := sup(-E)$, sabemos que $x in RR "con" x lt.eq alpha ==> exists y
+  in -E$ tal que $x lt.eq y lt.eq alpha$. Entonces, sea $lambda in RR$ con
+  $lambda gt.eq -alpha$, entonces: $ -lambda lt.eq alpha &==> exists x in E
+  "tal que" -lambda lt.eq -x lt.eq alpha \ &==> lambda gt.eq x gt.eq -alpha \
+  &==> -alpha eq inf(E) \ &==> -sup(-E) eq inf(E) $
+
+  $therefore sup(-E) eq -inf(E)$
+
+  Similarmente, si $alpha := inf(-E)$, entonces: $ alpha lt.eq -x space forall x
+  in E &==> -alpha gt.eq x space forall x in E \ &==> -alpha
+  "es una cota superior para" E. $ Y si $lambda in RR$ tiene $lambda lt.eq
+  -alpha$, entonces: $ -lambda gt.eq alpha &==> exists x in E "tal que" -lambda
+  gt.eq -x gt.eq alpha \ &==> lambda lt.eq x lt.eq -alpha \ &==> -alpha eq
+  sup(E) \ &==> -inf(-E) eq sup(E) $
+
+  $therefore inf(-E) eq -sup(E)$
+
+  Ahora, como tenemos que ${x_n} subset.eq RR$ es acotada y no-vacia, usando
+  estos resultados, tenemos que: $ limsupinfty(-x_n) &eq inf_(n in NN)
+  { sup{ -x_k | k gt.eq n }_n } \ &eq inf_(n in NN){ -inf{ x_k | k gt.eq n }_n }
+  \ &eq -sup_(n in NN){ inf{x_k | k gt.eq n}_n } \ &eq -liminfinfty(x_n) $ Y,
+  similarmente: $ liminfinfty(-x_n) &eq sup_(n in NN){ inf{-x_k | k gt n}_n } \
+  &eq sup_(n in NN){ -sup{ x_k | k gt.eq n }_n } \ &eq -inf_(n in NN){ sup{ x_k
+  | k gt.eq n }_n } \ &eq -limsupinfty(x_n) $
 
   *MEP*
 ]
