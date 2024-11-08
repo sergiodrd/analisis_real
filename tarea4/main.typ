@@ -102,6 +102,27 @@
   $liminfty x_n eq 0$. Luego pruebe que $liminfty (x_(n + 1)) / x_n eq 1 / 2$._
 
   == Prueba:
+  Sabemos que $0 lt x_1 lt 1$. Ahora suponga que $0 lt x_k lt 1$, entonces:
+  $ &0 lt 1 - x_k lt 1 \ ==> &0 lt sqrt(1 - x_k) lt 1 \ ==> &0 lt 1 - sqrt(1 -
+  x_k) lt 1 \ ==> &0 lt x_(k + 1) lt 1 $ Entonces, por induccion, $0 lt x_n lt
+  1 space forall n in NN$. Ahora, note que si $0 lt alpha lt 1$, entonces:
+  $ &0 lt 1 - alpha lt 1 \ ==> &alpha (1 - alpha) gt 0 \ ==> &alpha - alpha^2 gt
+  0 \ ==> &alpha gt alpha^2 \ ==> &sqrt(alpha) gt alpha $
+
+  Usando esto: $ &sqrt(1 - x_n) gt 1 - x_n \ ==> &-sqrt(1 - x_n) lt -1 + x_n \
+  ==> &1 - sqrt(1 - x_n) lt x_n \ ==> &x_(n + 1) lt x_n $
+
+  $therefore {x_n}$ es decreciente.
+
+  Como ${x_n}$ es decreciente y acotada inferiormente, sabemos que $exists L
+  gt.eq 0$ tal que $liminfty x_n eq L$. Ahora note que: $ &x_(n + 1) eq 1 -
+  sqrt(1 - x_n) \ ==> & liminfty x_(n + 1) eq liminfty(1 - sqrt(1 - x_n)) \ ==>
+  &L eq 1 - sqrt(1 - L) \ ==> &L - 1 eq -sqrt(1 - L) \ ==> &L^2 - 2 L + 1 eq 1
+  - L \ ==> &L^2 - L eq 0 \ ==> &L (L - 1) eq 0 \ ==> &L eq 0 or L eq 1 $
+
+  Pero sabemos que $L eq.not 1$.
+
+  $therefore liminfty x_n eq 0$
 
   *MEP*
 ]
