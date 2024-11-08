@@ -179,6 +179,18 @@
   $x_n -> x$._
 
   == Prueba:
+  Para cada $n in NN$, considere el intervalo $((n x - 1) / n, (n x + 1) / n)$.
+  Como el intervalo $(n x - 1, n x + 1)$ contiene al menos un entero, podemos
+  escoger $m_n in ZZ$ tal que $(n x - 1) / n lt m_n / n lt (n x + 1) / n$.
+  Entonces definamos \ $x_n := m_n / n in QQ$.
+
+  Ahora, fije $epsilon gt 0$. Entonces, por la propiedad arquimideana, podemos
+  encontrar $N in NN$ tal que $1 / N lt epsilon$, y entonces es claro que $n gt
+  N ==> 1 / n lt epsilon$. Pero sabemos que: $ &(n x - 1) / n lt x_n lt (n x +
+  1) / n \ ==> &x - 1 / n lt x_n lt x + 1 / n \ ==> &x - epsilon lt x_n lt x +
+  epsilon \ ==> &abs(x_n - x) lt epsilon $
+
+  $therefore liminfty x_n eq x ==> overline(QQ) eq RR$
 
   *MEP*
 ]
