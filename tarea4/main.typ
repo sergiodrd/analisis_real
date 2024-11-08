@@ -233,6 +233,25 @@
 
   _(a) - (4 puntos) -- Si $x_n -> x$ en $RR$, demuestre que $y_n -> x$._
   == Prueba:
+  Note que: $ y_n eq 1 / n sum_(j eq 1)^n x_j &eq 1 / n sum_(j eq 1)^n x + 1 / n
+  sum_(j eq 1)^n (x_j - x) $ Ahora sean $A_n := 1 / n sum_(j eq 1)^n x$ y $B_n
+  := 1 / n sum_(j eq 1)^n (x_j - x)$, y note que $liminfty y_n eq liminfty A_n +
+  liminfty B_n$.
+
+  Es claro que $liminfty A_n eq x$. Ahora trabajaremos con $B_n$. Fije $epsilon
+  gt 0$, entonces $exists N in NN$ tal que \ $abs(x_n - x) lt epsilon$.
+  Entonces: $ B_n eq 1 / n sum_(j eq 1)^N (x_j - x) + 1 / n sum_(j eq N + 1)^n
+  (x_j - x) $ Sean $C_n := 1 / n sum_(j eq 1)^N (x_j - x)$ y $D_n := 1 / n
+  sum_(j eq N + 1)^n (x_j - x)$, y note que $liminfty B_n eq liminfty C_n +
+  liminfty D_n$.
+
+  Note que, usando la propiedad arquimideana, $exists M in NN$
+  tal que $C_n lt (N dot M) / n -> 0$. Por lo tanto, $liminfty C_n eq 0$. Para
+  $D_n$, tenemos que: $ D_n lt 1 / n sum_(j eq N + 1)^(n) epsilon eq (n - N) / n
+  dot epsilon lt epsilon $ Entonces $liminfty D_n eq 0 ==> liminfty B_n eq 0 + 0
+  eq 0 ==> liminfty y_n eq x + 0$.
+
+  $therefore liminfty y_n eq x$
 
   *MEP*
 
