@@ -312,6 +312,13 @@
   a_(2 n); tab (n in NN). $ Calcule $limsupinfty a_n$ y $liminfinfty a_n$._
 
   == Prueba:
+  Note que $a_(2 n + 1) gt a_(2 n) space forall n in NN$. Entonces, para
+  calcular $limsupinfty a_n$, solo hace falta considerar ${a_(2 n + 1)}$. Note
+  que: $ a_(2 (1) + 1) eq 1 / 2 + a_2 eq 1 / 2 + 0 eq (2^(1 - 1) - 1) /
+  2^(1 - 1) ", y" \ a_(2 k + 1) eq (2^(k - 1) - 1) / 2^(k - 1) ==> a_(2 (k + 1)
+  + 1) eq 1 / 2 + a_(2 (k + 1)) eq 1 / 2 + a_(2 k + 1) / 2 \ eq 1 / 2 + 1 / 2 (
+  (2^(k - 1) - 1) / 2^(k - 1)) eq 1 / 2 + (2^(k - 1) - 1) / 2^k $
+
 
   *MEP*
 ]
