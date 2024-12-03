@@ -24,7 +24,23 @@
   $N_0 in NN$), pruebe que si $sum a_k$ converge, entonces
   $sum_(k eq 1)^(infinity) sqrt(abs(a_k)) / k$ converge._
   == Prueba:
+  La desigualdad Cauchy-Schwarz nos dice que $abs(limits(sum)_(k eq 1)^n
+  a_k b_k)^2 lt.eq limits(sum)_(k eq 1)^n abs(a_k)^2 limits(sum)_(k eq 1)^n
+  abs(b_k)^2$.
 
+  Si $S_n := limits(sum)_(k eq 1)^n sqrt(abs(a_k)) / k$ es la sucesion de sumas
+  parciales de la serie, entonces, aplicando la desigualdad Cauchy-Schwarz
+  tenemos que:
+  $ abs(S_n)^2 lt.eq sum_(k eq 1)^n abs(a_k) sum_(k eq 1)^n abs(1 / k^2) $
+
+  Pero el limite del primer factor del lado derecho converge por hipotesis y
+  el limite del segundo factor converge porque es una $p$-serie con $p eq 2$.
+  Entonces, por comparacion directa:
+  $ abs(sum_(k eq 1)^infinity sqrt(abs(a_k)) / k)^2 " converge" $
+
+  Y si sacas la raiz tienes nuestra conclusion.
+
+  $therefore limits(sum)_(k eq 1)^infinity sqrt(abs(a_k)) / k$ converge.
 
   *MEP*
 ]
