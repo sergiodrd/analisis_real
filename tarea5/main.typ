@@ -99,8 +99,36 @@
   converge y ${b_n}$ es sucesion monotonica acotada, demuestre que $sum a_k b_k$
   converge._
   == Prueba:
+  Primero demostraremos la formula de sumatorias parciales. Si ${a_n}, {b_n}$
+  son sucesiones, y \ $A_n := sum_(k eq 0)^n a_k$ es la sucesion de sumas
+  parciales de $a_n$, tenemos que:
+  $ sum_(n eq p)^q a_n b_n eq sum_(n eq p)^(q - 1) A_n (b_n - b_(n + 1)) + A_q
+  b_q - A_(p - 1) b_p $
 
+  === Prueba:
+  $ sum_(n eq p)^q a_n b_n &eq sum_(n eq p)^q (A_n - A_(n - 1)) b_n \ &eq
+  sum_(n eq p)^q A_n b_n - sum_(n eq p - 1)^(q - 1) A_n b_(n + 1) \ &eq
+  sum_(n eq p)^(q - 1) A_n b_n - sum_(n eq p - 1)^(q - 1) A_n b_(n + 1) + A_q
+  b_q \ &eq sum_(n eq p)^(q - 1) A_n b_n - sum_(n eq p)^(q - 1) A_n b_(n + 1) +
+  A_q b_q - A_(p - 1) b_p \ &eq sum_(n eq p)^(q - 1) A_n (b_n - b_(n + 1)) +
+  A_q b_q - A_(p - 1) b-p \ square $
 
+  Ahora demostraremos que $sum a_k b_k$ converge cuando $b_k$ es no-creciente.
+
+  Como $sum a_k$ converge, $A_k$ es acotada. Entonces sea $M gt 0$ tal que
+  $abs(A_k) lt M$. Ademas, al ser monotonica y acotada, $b_n$ converge. Sea
+  $liminfty b_n eq L$. Entonces $exists N in NN$ tal que \ $n gt.eq N ==>
+  abs(b_n - L) lt epsilon / (2 M) - L$.
+
+  Entonces tenemos que, para $n gt m gt.eq N$, tenemos que:
+  $ abs(sum_(k eq m + 1)^n a_k b_k) &eq abs(sum_(k eq m + 1)^(n - 1) A_k
+  (b_k - b_(k + 1)) + A_n b_n - A_m b_(m + 1)) \ &lt.eq M
+  abs(sum_(k eq m + 1)^(n - 1) (b_k - b_(k + 1)) + b_n - b_(m + 1)) \ &eq
+  M abs(b_n + b_(n + 1)) eq M abs((b_n - L) + (b_(n + 1) - L) + 2 L) \ &lt
+  M abs(epsilon / (2 M) - L + epsilon / (2 M) - L + 2 L) eq M abs(epsilon / M)
+  lt epsilon $
+
+  Entonces, por el criterio de Cauchy, $sum a_k b_k$ converge.
 
   *MEP*
 ]
