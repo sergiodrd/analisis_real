@@ -51,11 +51,6 @@
   n - 1$ para cada $n in NN$. Demuestre que $sum_(k eq 1)^(infinity) a_k / k! in
   QQ$ si y solo si existe $N_0 in NN$ tal que $a_n eq n - 1$ para todo $n gt.eq
   N_0$._
-  == Prueba:
-
-
-
-  *MEP*
 ]
 
 // problema 3
@@ -92,11 +87,6 @@
 
   _(b) - (6 puntos) -- Demuestre que $limits(sum)_(j eq 1)^(m) zeta (s; j / m)
   eq m^s zeta (s)$._
-  == Prueba:
-
-
-
-  *MEP*
 
   ===
 
