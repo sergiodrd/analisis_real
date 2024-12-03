@@ -87,8 +87,36 @@
   _(c) - (6 puntos) -- Pruebe que $limits(sum)_(k eq 1)^(infinity) (-1)^(k - 1)
   k^(-s) eq (1 - 2^(1 - s)) zeta (s)$._
   == Prueba:
+  Sea $A_n := limits(sum)_(k eq 0)^n (1 + k)^(-s)$ la sucesion de sumas
+  parciales de $zeta (s)$. Ahora considere las ecuaciones:
+  $ A_n eq 1 + 1 / 2^s + 1 / 3^s + ... + 1 / n^s $
+  $ (2^(1 - s)) A_n eq 2 / 2^s A_n eq 2 (1 / 2^s + 1 / 4^s + 1 / 6^s + ... +
+  1 / (2 n)^s) $
 
+  Ahora le restaremos la ecuacion (6) a la ecuacion (5), mantendremos los
+  terminos en posiciones impares de la ecuacion (6) y restaremos en los terminos
+  en posiciones pares, luego quedan algunos terminos. Pero primero, note que
+  $exists n in NN$ tal que $n eq 2 m$ o $n eq 2 m + 1$. El signo del ultimo
+  termino del primer parentesis depende de cual de estas es cierta, pero el
+  metodo sigue igual.
 
+  $ (1 - 2^(1 - s)) A_n &eq (1 - 1 / 2^s + 1 / 3^s - 1 / 4^s ...) - 2
+  (1 / (2 (m + 1))^s + 1 / (2 (m + 2)^s) + ... + 1 / (2 n)^s) \ &eq
+  sum_(k eq 1)^n (-1)^(k - 1) k^(-s) - 2 sum_(k eq m + 1)^(n) 1 / (2 k)^s \ &eq
+  sum_(k eq 1)^n (-1)^(k - 1) k^(-s) - 2 (sum_(k eq 1)^n 1 / (2 k)^s -
+  sum_(k eq 1)^m 1 / (2 k)^s) $
+
+  Ahora, podemos tomar limites de ambos extremos de la ecuacion. \ (Note que
+  $m --> infinity$ cuando $n --> infinity$).
+
+  $ &(1 - 2^(1 - s)) sum_(k eq 0)^n (1 + k)^s eq sum_(k eq 1)^n (-1)^(k - 1)
+  k^(-s) - 2 (sum_(k eq 1)^n 1 / (2 k)^s - sum_(k eq 1)^m 1 / (2 k)^s) \ ==>
+  &(1 - 2^(1 - s)) sum_(k eq 0)^infinity (1 + k)^s eq sum_(k eq 1)^infinity
+  (-1)^(k - 1) k^(-s) - 2 liminfty (sum_(k eq 1)^n 1 / (2 k)^s - sum_(k eq 1)^m
+  1 / (2 k)^s) $
+
+  $ therefore (1 - 2^(1 - s)) sum_(k eq 0)^infinity (1 + k)^s eq
+  sum_(k eq 1)^infinity (-1)^(k - 1) k^(-s) $
 
   *MEP*
 ]
