@@ -58,12 +58,12 @@
   Ahora note que dados $s_1 gt 1, s_2 gt 1, a_1, a_2 in (0, 1]$, $ &(s_1, a_1)
   eq (s_2, a_2) \ ==> &s_1 eq s_2 and a_1 eq a_2 $
 
-  Ahora usaremos induccion. Note que $a_1^(s_1) eq a_2^(s_2)$. Ahora:
-  $ &S_j (s_1, a_1) eq S_j (s_2, a_2) \ ==> &sum_(k eq 0)^j (a_1 + k)^(s_1) eq
-  sum_(k eq 0)^j (a_2 + k)^(s_2) \ ==> &sum_(k eq 0)^j (a_1 + k)^(s_1) + (a_1 +
-  j + 1)^(s_1) eq sum_(k eq 0)^j (a_2 + k)^(s_2) + (a_2 + j + 1)^(s_2) \ ==>
-  &sum_(k eq 0)^(j + 1) (a_1 + k)^(s_1) eq sum_(k eq 0)^(j + 1) (a_2 + k)^(s_2)
-  \ ==> &S_(j + 1) (s_1, a_1) eq S_(j + 1) (s_2, a_2) $
+  Ahora usaremos induccion. Note que $a_1^(-s_1) eq a_2^(-s_2)$. Ahora:
+  $ &S_j (s_1, a_1) eq S_j (s_2, a_2) \ ==> &sum_(k eq 0)^j (a_1 + k)^(-s_1) eq
+  sum_(k eq 0)^j (a_2 + k)^(-s_2) \ ==> &sum_(k eq 0)^j (a_1 + k)^(-s_1) + (a_1
+  + j + 1)^(-s_1) eq sum_(k eq 0)^j (a_2 + k)^(-s_2) + (a_2 + j + 1)^(-s_2) \
+  ==> &sum_(k eq 0)^(j + 1) (a_1 + k)^(-s_1) eq sum_(k eq 0)^(j + 1)
+  (a_2 + k)^(-s_2) \ ==> &S_(j + 1) (s_1, a_1) eq S_(j + 1) (s_2, a_2) $
 
   Entonces: $ &S_n (s_1, a_1) eq S_n (s_2, a_2) \ ==> &liminfty S_n (s_1, a_1)
   eq liminfty S_n (s_2, a_2) $
